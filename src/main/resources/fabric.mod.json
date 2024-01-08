@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "my_mod",
+	"version": "${version}",
+	"name": "my_mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"wyatt!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/my_mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.wyatt.my_mod.My_mod"
+			],
+			"client": [
+				"net.wyatt.my_mod.My_modlient"
+		],
+
+		"fabric-datagen": [
+			"net.wyatt.my_mod.My_modDataGenerator"
+		]
+	},
+	"mixins": [
+		"my_mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
